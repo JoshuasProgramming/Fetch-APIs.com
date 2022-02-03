@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+/*Reset CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 3px;
+}
+
+body {
+  font-size: 100%;
+  color: white;
+  background: linear-gradient(132deg, #2c2c2c, #000c32, #7b88ff);
+  background-size: 400% 400%;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0px;
+}
+
+/*Font family for paragraghs*/
+p {
+  font-size: 25px;
+  margin: -6px;
+  color: white;
+}
+
+/*Navigation bar BEGINS*/
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  height: 25px;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 50px;
+  position: fixed;
+  z-index: 999;
+  background-color: black;
+  color: white;
+  -webkit-box-shadow: 10px 10px 12px #4d91ff;
+          box-shadow: 10px 10px 12px #4d91ff;
+  /*Left side of navigation bar*/
+  /*Middle area in the navigation bar*/
+  /*right area in the navigation bar*/
+}
+
+.header .left-side a {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.header .middle-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* CovidApi page*/
+}
+
+.header .middle-navbar .active {
+  color: #4d91ff;
+  opacity: 100%;
+}
+
+.header .middle-navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.header .middle-navbar li {
+  list-style: none;
+  margin: 0px 20px;
+}
+
+.header .middle-navbar li:hover {
+  text-shadow: 1px 1px 30px #4d91ff;
+  cursor: pointer;
+}
+
+.header .right-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 30px;
+}
+
+.header .right-navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.header .right-navbar li {
+  list-style: none;
+  margin: 0px 20px;
+}
+
+.header .right-navbar li:hover {
+  text-shadow: 1px 1px 30px #4d91ff;
+  cursor: pointer;
+}
+
+section {
+  width: 100%;
+  float: left;
+  height: 100vh;
+  position: fixed;
+}
+
+section .header-text1 {
+  position: absolute;
+  top: 35%;
+  left: 49%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: whitesmoke;
+  font-size: 66px;
+  font-weight: bold;
+  margin: 0px 1px;
+  text-shadow: 5px 5px 19px black;
+}
+
+section .header-text2 {
+  color: #4d91ff;
+  position: absolute;
+  top: 50%;
+  left: 49%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 125px;
+  font-weight: bold;
+  margin: 0px 1px;
+  text-shadow: 5px 5px 19px black;
+}
+
+section .header-text3 {
+  color: whitesmoke;
+  position: absolute;
+  top: 69%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 110px;
+  font-weight: bold;
+  margin: 0px 1px;
+  text-shadow: 5px 5px 19px black;
+}
+
+section .header-text-btn {
+  margin: 595px 570px;
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  opacity: 80%;
+}
+
+section .header-text-btn a {
+  text-decoration: none;
+  color: black;
+}
+
+section .header-text-btn:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
+section .header-text-btn:active {
+  -webkit-box-shadow: 1px 1px 11px #4d91ff;
+          box-shadow: 1px 1px 11px #4d91ff;
+}
+
+/* Covid Api page */
+.covid-api-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.covid-api-container .box1 {
+  width: 400px;
+  height: 200px;
+  background: white;
+  margin: -100px 100px;
+  -webkit-box-shadow: 1px 1px 11px #4d91ff;
+          box-shadow: 1px 1px 11px #4d91ff;
+  border-radius: 25px;
+  color: black;
+  text-align: center;
+  font-size: 80px;
+}
+
+.search-covid-api {
+  margin: 205px 355px;
+  outline: none;
+  width: 650px;
+  height: 60px;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 11px #4d91ff;
+          box-shadow: 1px 1px 11px #4d91ff;
+  border: none;
+  font-size: 25px;
+  text-align: center;
+}
+
+.select-covid-api {
+  position: absolute;
+  top: 45%;
+  left: 37%;
+  outline: none;
+  width: 350px;
+  height: 45px;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 1px 11px #4d91ff;
+          box-shadow: 1px 1px 11px #4d91ff;
+  border: none;
+  font-size: 25px;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

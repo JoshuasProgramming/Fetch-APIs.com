@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Covid Api</title>
+</head>
+<body>
+    <!--Navigation bar-->
+    <div class="header">
+
+            <!--Left side of navigation bar-->
+            <div class="left-side">
+                <a href="index.html">Fetch APIs.com</a>
+            </div>
+
+            <!--Middle of navigation bar-->
+            <ul class="middle-navbar">
+                <li><a href="#" class="active">Covid Api Tracker</a></li>
+                <li><a href="#">Weather Api</a></li>
+                <li><a href="#">Movie Api</a></li>
+            </ul>
+
+            <!--Right side of navigation bar-->
+            <div class="right-side">
+                <ul class="right-navbar">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+    </div>
+
+    <!--Search bar-->
+    <input type="search" class="search-covid-api" id="search_covid_api" placeholder="Enter Country">
+
+    <!--Select Covid Options-->
+    <select class="select-covid-api" id="select_covid_api" disabled>
+        <option value="select">Select</option>
+        <option value="covid_deaths">Covid Deaths</option>
+        <option value="covid_cases">Covid Cases</option>
+        <option value="incident_rate">Incident Rate</option>
+        <option value="mortality_rate">Mortality Rate</option>
+    </select>
+
+    <!--Container for output boxes-->
+    <!----
+    <div class="covid-api-container">
+        <div class="box1">Covid Deaths <span class="covid-api-data">1,000,000</span></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+-->
+<script src="covid_api_script.js"></script>
+</body>
+</html>
