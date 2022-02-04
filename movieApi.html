@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Covid Api</title>
+    <title>Movie Api</title>
 </head>
 <body>
     <!--Navigation bar-->
@@ -18,9 +18,9 @@
 
             <!--Middle of navigation bar-->
             <ul class="middle-navbar">
-                <li><a href="covidApi.html" class="active">Covid Api Tracker</a></li>
+                <li><a href="covidApi.html">Covid Api Tracker</a></li>
                 <li><a href="weatherApi.html">Weather Api</a></li>
-                <li><a href="movieApi.html">Movie Api</a></li>
+                <li><a href="movieApi.html" class="active">Movie Api</a></li>
             </ul>
 
             <!--Right side of navigation bar-->
@@ -31,28 +31,5 @@
                 </ul>
             </div>
     </div>
-
-    <!--Search bar-->
-    <input type="search" class="search-covid-api" id="search_covid_api" placeholder="Enter Country">
-
-    <!--Select Covid Options-->
-    <select class="select-covid-api" id="select_covid_api" disabled>
-        <option value="select">Select</option>
-        <option value="covid_deaths">Covid Deaths</option>
-        <option value="covid_cases">Covid Cases</option>
-        <option value="incident_rate">Incident Rate</option>
-        <option value="mortality_rate">Mortality Rate</option>
-    </select>
-
-    <!--Container for output-->
-    <div class="covid-api-output-container">
-        <p class="output-text" id="output_text"></p>
-
-        <div class="google-map" id="map">
-
-        </div>
-    </div>
-
-<script src="covid_api_script.js"></script>
 </body>
 </html>

@@ -2,6 +2,7 @@
 
 $blue-box-shadow:1px 1px 11px rgb(77, 145, 255);
 $neonBlue: rgb(77, 145, 255);
+$neonyellow: rgb(255, 252, 77);
 
 /*Reset CSS*/
 *{
@@ -271,6 +272,249 @@ section{
     .output-weather-text{
         text-align:center;
         font-size:80px;
+    }
+
+}
+
+/* Login Page */
+
+.right-side{
+    .right-navbar{
+        .active{
+            color:$neonBlue;
+        }
+
+        li{
+            list-style: none;
+            margin: 0px 20px;
+
+            &:hover{
+                text-shadow: 1px 1px 30px $neonBlue;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.login-form{
+    position:absolute;
+    top:20%;
+    left:35%;
+    width:450px;
+    height:300px;
+    box-shadow: 3px 3px 30px $neonBlue;
+    border-radius: 15px;
+
+    .login-username{
+        box-shadow: 3px 3px 30px $neonBlue;
+        border-radius: 5px;
+        width:250px;
+        height:55px;
+        border:none;
+        text-align: center;
+        position: absolute;
+        top:10%;
+        left:20%;
+        background: transparent;
+        color:white;
+        font-size:25px;
+        outline:none;
+
+        &:hover{
+            cursor:pointer;
+            font-size:30px;
+            box-shadow: 3px 3px 90px $neonBlue;
+            transition:1s;
+        }
+    }
+
+    .login-password{
+        box-shadow: 3px 3px 30px $neonBlue;
+        border-radius: 5px;
+        width:250px;
+        height:55px;
+        border:none;
+        text-align: center;
+        position: absolute;
+        top:35%;
+        left:20%;
+        background: transparent;
+        color:white;
+        font-size:25px;
+        outline:none;
+
+        &:hover{
+            cursor:pointer;
+            font-size:30px;
+            box-shadow: 3px 3px 90px $neonBlue;
+            transition:1s;
+        }
+    }
+
+    .login-btn{
+        box-shadow: 3px 3px 30px $neonyellow;
+        border-radius: 5px;
+        width:250px;
+        height:55px;
+        border:none;
+        text-align: center;
+        position: absolute;
+        top:75%;
+        left:20%;
+        background: transparent;
+        color:white;
+        font-size:25px;
+        outline:none;
+
+        &:hover{
+            cursor:pointer;
+            font-size:30px;
+            transition:1s;
+            box-shadow: 3px 3px 90px $neonyellow;
+        }
+    }
+}
+
+.show-password-container{
+    position: absolute;
+    top:105%;
+    left:29.5%;
+    font-size:19px;
+    border: $neonyellow;
+
+    .login-password-checkbox{
+        width:20px;
+        height:20px;
+    }
+
+}
+
+/* Register Page */
+
+.register-form{
+    position:absolute;
+    top:20%;
+    left:35%;
+    width:450px;
+    height:370px;
+    box-shadow: 3px 3px 30px $neonBlue;
+    border-radius: 15px;
+
+    .register-username{
+        box-shadow: 3px 3px 30px $neonBlue;
+        border-radius: 5px;
+        width:250px;
+        height:55px;
+        border:none;
+        text-align: center;
+        position: absolute;
+        top:5%;
+        left:20%;
+        background: transparent;
+        color:white;
+        font-size:25px;
+        outline:none;
+
+        &:hover{
+            cursor:pointer;
+            font-size:30px;
+            box-shadow: 3px 3px 90px $neonBlue;
+            transition:1s;
+        }
+    }
+
+    .register-email{
+        box-shadow: 3px 3px 30px $neonBlue;
+        border-radius: 5px;
+        width:250px;
+        height:55px;
+        border:none;
+        text-align: center;
+        position: absolute;
+        top:25%;
+        left:20%;
+        background: transparent;
+        color:white;
+        font-size:25px;
+        outline:none;
+
+        &:hover{
+            cursor:pointer;
+            font-size:30px;
+            box-shadow: 3px 3px 90px $neonBlue;
+            transition:1s;
+        }
+    }
+
+
+    .register-password{
+        box-shadow: 3px 3px 30px $neonBlue;
+        border-radius: 5px;
+        width:250px;
+        height:55px;
+        border:none;
+        text-align: center;
+        position: absolute;
+        top:45%;
+        left:20%;
+        background: transparent;
+        color:white;
+        font-size:25px;
+        outline:none;
+
+        &:hover{
+            cursor:pointer;
+            font-size:30px;
+            box-shadow: 3px 3px 90px $neonBlue;
+            transition:1s;
+        }
+    }
+
+
+    .register-confirm-password{
+        box-shadow: 3px 3px 30px $neonBlue;
+        border-radius: 5px;
+        width:250px;
+        height:55px;
+        border:none;
+        text-align: center;
+        position: absolute;
+        top:63%;
+        left:20%;
+        background: transparent;
+        color:white;
+        font-size:25px;
+        outline:none;
+
+        &:hover{
+            cursor:pointer;
+            font-size:30px;
+            box-shadow: 3px 3px 90px $neonBlue;
+            transition:1s;
+        }
+    }
+
+    .register-btn{
+        box-shadow: 3px 3px 30px $neonyellow;
+        border-radius: 5px;
+        width:250px;
+        height:55px;
+        border:none;
+        text-align: center;
+        position: absolute;
+        top:81%;
+        left:20%;
+        background: transparent;
+        color:white;
+        font-size:25px;
+        outline:none;
+
+        &:hover{
+            cursor:pointer;
+            font-size:30px;
+            transition:1s;
+            box-shadow: 3px 3px 90px $neonyellow;
+        }
     }
 
 }

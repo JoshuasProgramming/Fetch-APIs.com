@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Fetch APIs.com</title>
+    <title>Login</title>
 </head>
 <body>
     <!--Navigation bar-->
@@ -26,21 +26,24 @@
             <!--Right side of navigation bar-->
             <div class="right-side">
                 <ul class="right-navbar">
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="#">Register</a></li>
+                    <li><a href="login.html" class="active">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
                 </ul>
             </div>
     </div>
 
-    <!--Hero section with info and cta-->
-    <section>
-        <h3 class="header-text1">Your one way ticket for</h3>
-        <h1 class="header-text2">FETCH API</h1>
-        <h3 class="header-text3">Applications</h3>
-        <button class="header-text-btn"><a href="covidApi.html">Lets Go!</a></button>
-    </section>
+    <!--Login Form with username & password-->
+    <form class="login-form">
+        <input placeholder="Username" class="login-username" id="login_username" type="text" autocomplete="off" required>
+        <input placeholder="Password" class="login-password" id="login_password" type="password" autocomplete="off" required>
+        <button class="login-btn">Login</button>
 
-    <!--Import of javascript file-->
-    <script src="script.js"></script>
+        <div class="show-password-container">
+            <input type="checkbox" id="login_password_checkbox" class="login-password-checkbox">
+            <label for="login_password_checkbox">Show Password</label>
+        </div>
+
+    </form>
+<script src="login.js"></script>
 </body>
 </html>
