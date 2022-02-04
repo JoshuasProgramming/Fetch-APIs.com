@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Covid Api</title>
+    <title>Weather Api</title>
 </head>
 <body>
     <!--Navigation bar-->
@@ -18,8 +18,8 @@
 
             <!--Middle of navigation bar-->
             <ul class="middle-navbar">
-                <li><a href="covidApi.html" class="active">Covid Api Tracker</a></li>
-                <li><a href="weatherApi.html">Weather Api</a></li>
+                <li><a href="covidApi.html">Covid Api Tracker</a></li>
+                <li><a href="weatherApi.html" class="active">Weather Api</a></li>
                 <li><a href="#">Movie Api</a></li>
             </ul>
 
@@ -33,26 +33,26 @@
     </div>
 
     <!--Search bar-->
-    <input type="search" class="search-covid-api" id="search_covid_api" placeholder="Enter Country">
-
-    <!--Select Covid Options-->
-    <select class="select-covid-api" id="select_covid_api" disabled>
+    <input placeholder="enter location" type="search" id="country_weather" class="search-weather-api">
+    
+    <!--Select Weather Options-->
+    <select class="select-weather-api" id="select_weather_api" disabled>
         <option value="select">Select</option>
-        <option value="covid_deaths">Covid Deaths</option>
-        <option value="covid_cases">Covid Cases</option>
-        <option value="incident_rate">Incident Rate</option>
-        <option value="mortality_rate">Mortality Rate</option>
+        <option value="Temperature(f)">Temperature(f)</option>
+        <option value="Temperature(c)">Temperature(c)</option>
+        <option value="wind (mph)">wind (mph)</option>
+        <option value="wind (kph)">wind (kph)</option>
+        <option value="humidity">humidity</option>
+        <option value="uv">uv</option>
+        <option value="Condition">Condition</option>
+        <option value="Last Updated">Last Updated</option>
     </select>
 
     <!--Container for output-->
-    <div class="covid-api-output-container">
-        <p class="output-text" id="output_text"></p>
-
-        <div class="google-map" id="map">
-
-        </div>
+    <div class="weather-api-output-container">
+        <p class="output-weather-text" id="output_text"></p>
     </div>
-
-<script src="covid_api_script.js"></script>
+    
+    <script src="weather_api_script.js"></script>
 </body>
 </html>
