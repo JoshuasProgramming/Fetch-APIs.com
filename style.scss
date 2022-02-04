@@ -518,3 +518,45 @@ section{
     }
 
 }
+
+
+/* Movie API Page*/
+.random-movie-btn{
+    position: absolute;
+    top:25%;
+    left:37%;
+    outline:none;
+    width:350px;
+    height:45px;
+    border-radius: 15px;
+    box-shadow: $blue-box-shadow;
+    border:none;
+    font-size:25px;
+    text-align:center;
+
+    &:hover{
+        cursor:pointer;
+    }
+}
+
+.movie-image-output{
+    position: absolute;
+    top:35%;
+    left:34%;
+    outline:none;
+    width:450px;
+    height:300px;
+    border-radius: 15px;
+    box-shadow: $blue-box-shadow;
+    border:none;
+    font-size:25px;
+    text-align:center;
+}
+
+.movie_image_title{
+    position: absolute;
+    top:82%;
+    left:42%;
+    font-size:45px;
+    text-align:center;
+}
