@@ -33,12 +33,12 @@
     </div>
 
     <!--Register Form with username, email, password & confirm password-->
-    <form action="./includes/register.inc.php" class="register-form">
+    <form action="/website%204/includes/register.inc.php" method="post" class="register-form">
         <input name ="username" placeholder="Username" class="register-username" id="register_username" type="text" autocomplete="off" required>
         <input name="email" placeholder="Email" class="register-email" id="register_email" type="email" autocomplete="off" required>
         <input name="password" placeholder="Password" class="register-password" id="register_password" type="password" autocomplete="off" required>
         <input name="confirm_password" placeholder="Confirm Password" class="register-confirm-password" id="register_confirm_password" type="password" autocomplete="off" required>
-        <button class="register-btn" name="submit" type="submit">register</button>
+        <button class="register-btn" name="submit" type="submit" >register</button>
 
         <!--Show password checkbox that has functionality within the 'resgister.js' file-->
         <div class="show-password-container">

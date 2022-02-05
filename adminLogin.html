@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Login</title>
+    <title>Admin Login</title>
 </head>
 <body>
     <!--Navigation bar-->
@@ -33,17 +33,15 @@
     </div>
 
     <!--Login Form with username & password-->
-    <form class="login-form">
-        <input placeholder="Username" class="login-username" id="login_username" type="text" autocomplete="off" required>
-        <input placeholder="Password" class="login-password" id="login_password" type="password" autocomplete="off" required>
+    <form action="" method="post" class="login-form">
+        <input placeholder="Admin Username" class="login-username" id="login_username" type="text" autocomplete="off" required>
+        <input placeholder="Admin Password" class="login-password" id="login_password" type="password" autocomplete="off" required>
         <button class="login-btn">Login</button>
 
         <div class="show-password-container">
             <input type="checkbox" id="login_password_checkbox" class="login-password-checkbox">
             <label for="login_password_checkbox">Show Password</label>
         </div>
-
-        <a href="adminLogin.html" style="position: absolute; top:120%; left:35%; color:black; font-size:19px;">I'm the admin</a>
 
     </form>
 <script src="login.js"></script>
