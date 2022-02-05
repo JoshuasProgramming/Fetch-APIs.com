@@ -6,8 +6,6 @@ let url = "https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/nc
  * 2.Send a response in json
  * 3.output the json in the console
  */
-
-
 fetch(url)
 .then(response => response.json())
 .then(data => console.log(data.features));
@@ -32,9 +30,13 @@ search_covid_api.addEventListener("keyup", (e)=>{
         .then(data => {
             //looping through all the countries until the user enters one correctly
             for(let i = 0; i < 195; i++){
+                //If the country the user has entered is in the api turn on the select options
+                //element
+                //The 'trim()' method will remove any blank white space
                 if(search_covid_api.value.trim() == data.features[i].attributes.Country_Region){
                     select_covid_api.disabled = false;
 
+                    //Once the select option has been clicked, something happens
                     select_covid_api.addEventListener("click", (e)=>{
                         //output covid deaths
                         if(select_covid_api.value == "covid_deaths"){
