@@ -24,32 +24,32 @@ if(isset($_POST['update'])){
     $new_password = $_POST['new_password'];
     $confirm_new_password = $_POST['confirm_new_password'];
 
-    //Checking if the password the user entered isn't the same as the new password
-    if($current_password == $new_password){
-        header("Location:/website%204/errorPages/CurrentEqualsNew.html");
-    } 
-
-    //check if the current password, new password and confirm new password are the same
-    else if(($confirm_new_password == $current_password) && ($current_password == $new_password)){
+    //check if the current password, new password and confirm new password are the same (DONE!)
+    if(($confirm_new_password == $current_password) && ($current_password == $new_password)){
         header("Location:/website%204/errorPages/confirmCurrentNewSame.html");
     }
 
-    //check if the confirm new password is the same as the current password
+    //Checking if the password the user entered isn't the same as the new password (DONE!)
+    else if($current_password == $new_password){
+        header("Location:/website%204/errorPages/CurrentEqualsNew.html");
+    } 
+
+    //check if the confirm new password is the same as the current password(DONE!)
     else if($confirm_new_password == $current_password){
         header("Location:/website%204/errorPages/confirmEqualsCurrentPassword.html");
     }
 
-    //check if the new password is equal to the username
+    //check if the new password is equal to the username (DONE!)
     else if($new_password == $username){
         header("Location:/website%204/errorPages/newEqualsUsername.html");
     }
 
-    //check if the new password doesn't equal to the confirm new password
+    //check if the new password doesn't equal to the confirm new password (DONE!)
     else if($new_password !== $confirm_new_password){
         header("Location:/website%204/errorPages/newDoesntEqualConfirm.html");
     } 
     else{
-        echo "worked";
+        header("Location:/website%204/successPages/adminUpdated.html");
     }
     
 
