@@ -11,7 +11,10 @@ const select_weather_api = document.getElementById('select_weather_api');
 
 //Once the user inputs a letter ('keyup')
 country_weather.addEventListener("keyup", (e)=>{
+    //creating a variable to store the country the user has entered
     let country = country_weather.value;
+
+    //weather api url witch concatenate
     let url = "http://api.weatherapi.com/v1/current.json?key=21ed8138dc4749ff97381453220402&q=" + country +"&aqi=no";
 
     /**
