@@ -561,7 +561,27 @@ section{
     text-align:center;
 }
 
-/* Admin page */
-.table{
-    padding: 100px 100px;
+/* Admin Account Page */
+
+.admin-update-account-btn{
+    margin:100px;
+    width:200px;
+    height:50px;
+    font-size:25px;
+    opacity:80%;
+}
+
+.admin-view-users-btn{
+    
+    width:200px;
+    height:50px;
+    font-size:25px;
+    opacity:80%;
+}
+
+.admin-delete-account-btn{
+    width:200px;
+    height:50px;
+    font-size:25px;
+    opacity:80%;
 }
