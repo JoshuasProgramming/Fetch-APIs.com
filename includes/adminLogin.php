@@ -29,7 +29,7 @@ if(isset($_POST["submit"])){
 
     //If the user's login information doesn't work, they'll be given a "can't login" message/error.
     } else {
-        echo "Can't login with <br> username: ".$username."<br> password: ".$password;
-        //header("Location:/website%204/signed_out/cantLogin.html");
+        //echo "Can't login with <br> username: ".$username."<br> password: ".$password;
+        header("Location:/website%204/errorPages/cantLoginAdmin.html");
     }
 }
