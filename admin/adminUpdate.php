@@ -11,7 +11,9 @@ if (!isset($_SESSION['username'])) {
     header("Location:/website%204/adminLogin.html");
 }
 
+//Create $adminUsername variable => We'll be using this in the admin update form (Line [105])
 $adminUsername = ($_SESSION['username']);
+
 
 //Require the connection
 require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
@@ -49,10 +51,19 @@ if(isset($_POST['update'])){
         header("Location:/website%204/errorPages/newDoesntEqualConfirm.html");
     } 
     else{
-        header("Location:/website%204/successPages/adminUpdated.html");
-    }
-    
+        $sql_update_admin = ("UPDATE admin SET adminPassword='$new_password' WHERE username='$username' AND adminPassword='$current_password'");
 
+        //2.create mysqli_query with the database connection and the sql UPDATE query
+        $sql_update_result = mysqli_query($conn, $sql_update_admin);
+
+        //Create failure message
+        if(!$sql_update_admin){
+            die("Failed to update database. Check query string.");
+        }
+        else if($sql_update_admin){
+            header("Location:/website%204/successPages/adminUpdated.html");
+        }
+    }
 }
 
 ?>
