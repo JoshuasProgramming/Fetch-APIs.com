@@ -33,10 +33,10 @@
     </div>
 
     <!--Login Form with username & password-->
-    <form class="login-form">
-        <input placeholder="Username" class="login-username" id="login_username" type="text" autocomplete="off" required>
-        <input placeholder="Password" class="login-password" id="login_password" type="password" autocomplete="off" required>
-        <button class="login-btn">Login</button>
+    <form action="/website%204/includes/userLogin.php" method="post" class="login-form">
+        <input name="username" placeholder="Username" class="login-username" id="login_username" type="text" autocomplete="off" required>
+        <input name="userPassword" placeholder="Password" class="login-password" id="login_password" type="password" autocomplete="off" required>
+        <button name="submit" class="login-btn">Login</button>
 
         <div class="show-password-container">
             <input type="checkbox" id="login_password_checkbox" class="login-password-checkbox">

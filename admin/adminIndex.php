@@ -66,13 +66,14 @@ if(isset($_POST['delete'])){
 
     <!--Hero section with user infomation and cta-->
     <?php 
-    echo"<table border=1 style='position:absolute; top:20%; left:29%; font-size:20px; border-collapse:collapse;'>
+    echo"<table border=1 style='position:absolute; top:20%; left:17%; font-size:20px; border-collapse:collapse;'>
     <caption style='font-size:25px;'>User Account</caption>
     <thead>
         <th style='padding:10px 10px;'>ID</th>
         <th style='padding:10px 10px;'>username</th>
         <th style='padding:10px 10px;'>email</th>
         <th style='padding:10px 10px;'>password</th>
+        <th style='padding:10px 10px;'>user Image</th>
         <th style='padding:10px 10px;'>select</th>
         <th style='padding:10px 10px;'>delete users</th>
     </thead>";
@@ -83,6 +84,7 @@ if(isset($_POST['delete'])){
                 echo"<td style='padding:10px 10px;'>". $row['username'] . "</td>";
                 echo"<td style='padding:10px 10px;'>". $row['email'] . "</td>";
                 echo"<td style='padding:10px 10px;'>". $row['userPassword'] . "</td>";
+                echo"<td style='padding:10px 10px;'>". $row['userImage'] . "</td>";
                 echo"<td style='padding:10px 10px;'>
                         <input id='delete_checkbox' type='checkbox' name='keyToDelete' value='". $row['id'] . "'</td>";
                 echo"<th style='padding:10px 10px;'><button style='height:30px; width:70px;' id='delete_user_btn' name='delete' value='delete'>delete</button></th>";
