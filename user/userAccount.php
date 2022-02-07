@@ -16,8 +16,9 @@ $user = $_SESSION['username'];
 
 //Require the connection
 require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
-
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,8 +54,9 @@ require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
             </div>
     </div>
 
-    <?php 
 
+
+    <?php 
     //When the user presses the submit button (to upload an image)
     if(isset($_POST['submit'])){
         //move_uploaded_file 
@@ -68,15 +70,9 @@ require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
         $sql_image = "UPDATE users SET userImage = '".$hash. '.jpg'. "'WHERE username='$user'";
         $q = mysqli_query($conn, $sql_image);
     }
-    
     ?>
 
-    <form enctype="multipart/form-data" action="" method="post" style="position:absolute; top:80%; left:10%;">
-        <input type="file" name="file" style="font-size:20px">
-        <input type="submit" name="submit" style="font-size:21px"> 
-
-    </form>
-    <div style="position:absolute; top:28%; left:10%;">
+    <section style="position:absolute; top:28%; left:10%;">
         <?php
 
         //Adding the default user profile image
@@ -86,10 +82,10 @@ require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
 
         while($row = mysqli_fetch_assoc($result)){
 
-            echo $row['username'] . "<br>";
+            echo "<h2 style='font-size:25px;'>".$row['username'] . "</h2><br>";
 
             if($row['userImage'] == ""){
-                echo"<img width='300px' height='300px' src='../images/default.jpg'";
+                echo"<img style='border-radius=50px;' width='300px' height='300px' src='../images/default.jpg'";
                 $image = "default.jpg";
                 $sql_update_image = mysqli_query($conn, "UPDATE users SET userImage='$image' WHERE username='$username'");
             } else {
@@ -97,6 +93,25 @@ require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
             }
         }
         ?>
-    </div>
+    </section>
+
+
+    <section>
+        <!--Header text for the user's account name-->
+        <h1 class="header-text2" style="font-size:80px; top:-50%; left:60%;"> <?php echo $_SESSION['username']?>'s Account </h1>
+    
+        <!--Update account button-->
+        <button style="position:absolute; font-size:70px; top:-40%; left:45%;" id="user_update_btn">Update Account</button>
+
+        <!--Delete User account-->
+        <button style="position:absolute; font-size:72px; top:-15%; left:45%;" id="user_delete_btn">Delete Account</button>
+    
+        <form enctype="multipart/form-data" action="" method="post" style="position:absolute; top:5%; left:45%;">
+            <input type="file" name="file" style="font-size:20px">
+            <input type="submit" name="submit" style="font-size:21px"> 
+        </form>
+    </section>
+
+    <script src="userScript.js"></script>
 </body>
 </html>

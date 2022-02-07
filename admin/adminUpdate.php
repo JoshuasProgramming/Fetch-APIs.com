@@ -100,7 +100,7 @@ if(isset($_POST['update'])){
             </div>
     </div>
 
-     <!--Register Form with username, email, password & confirm password-->
+    <!--Register Form with username, email, password & confirm password-->
     <form action="" method="post" class="register-form">
         <input style="top:5%;" name ="username" placeholder="Username" class="register-username" id="register_username" value="<?php echo $adminUsername;?>" type="text" autocomplete="off" required>
         <input style="top:25%;" name="current_password" placeholder="Current Password" class="register-password" id="register_password" type="password" autocomplete="off" required>
@@ -108,7 +108,7 @@ if(isset($_POST['update'])){
         <input name="confirm_new_password" placeholder="Confirm New Password" class="register-confirm-password" id="register_confirm_password" type="password" autocomplete="off" required>
         <button class="register-btn" name="update" type="submit">Update</button>
 
-        <!--Show password checkbox that has functionality within the 'resgister.js' file-->
+        <!--Show password checkbox that has functionality within the 'register.js' file-->
         <div class="show-password-container">
             <input type="checkbox" id="register_password_checkbox" class="register-password-checkbox">
             <label for="register_password_checkbox">Show Password</label>
