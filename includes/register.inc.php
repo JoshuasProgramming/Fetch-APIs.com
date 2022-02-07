@@ -55,6 +55,7 @@ if(isset($_POST["submit"])){
         //(== 0 means that there isn't a user with that username & emaill)
         if((mysqli_num_rows($result_email) == 0) && (mysqli_num_rows($result_username) == 0)) {
 
+            //Create a query for that'll insert the data into the user table
             $sql = "INSERT INTO users (username, email, userPassword) 
                 VALUES ('$username', '$email', '$password')";
 

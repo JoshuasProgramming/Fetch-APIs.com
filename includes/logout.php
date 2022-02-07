@@ -6,9 +6,9 @@ session_start();
 
 
 session_destroy();
-//unregister a session variable using the unset method with the session user as a parameter
+//unregister a session variable using the unset method with the session admin as a parameter
 unset($_SESSION["username"]);
 
-//Once the session has be disconnected/unregistered the user is sent back to the login.html page
+//Once the session has be disconnected/unregistered the admin is sent back to the adminLogin.html page.
 header("Location:/website%204/adminLogin.html");
 ?>

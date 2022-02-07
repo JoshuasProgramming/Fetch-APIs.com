@@ -24,12 +24,12 @@ if(isset($_POST["submit"])){
 
     if($count == 1){
         $_SESSION['username'] = $_POST['username'];
-        //echo "Logged in with <br> username: ".$username."<br> password: ".$password;
+        //Send the admin to the admin index once they login successfully
         header("Location:/website%204/admin/adminIndex.php");
 
-    //If the user's login information doesn't work, they'll be given a "can't login" message/error.
+    //If the admin's login information doesn't work, they'll be given a "can't login" message/error.
     } else {
-        //echo "Can't login with <br> username: ".$username."<br> password: ".$password;
+        //Send the admin to the page where they are presented with an the login error.
         header("Location:/website%204/errorPages/cantLoginAdmin.html");
     }
 }
