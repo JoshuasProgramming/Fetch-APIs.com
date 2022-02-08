@@ -1,20 +1,3 @@
-<?php
-
-//Create session
-session_start();
-
-//prevents the undefined array key ERROR
-error_reporting(0);
-
-//Checking if the user has a session. If they don't they'll be redirected
-//to the admin login page
-if (!isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "You have to log in first";
-    header("Location:/website%204/login.html");
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +5,7 @@ if (!isset($_SESSION['username'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <!--Putting the user's name into the title of the page using the PHP session-->
-    <title><?php echo $_SESSION['username']?>'s account</title>
+    <title>Movie Api</title>
 </head>
 <body>
     <!--Navigation bar-->
@@ -38,7 +20,7 @@ if (!isset($_SESSION['username'])) {
             <ul class="middle-navbar">
                 <li><a href="userCovidApi.php">Covid Api Tracker</a></li>
                 <li><a href="userWeatherApi.php">Weather Api</a></li>
-                <li><a href="userMovieApi.php">Movie Api</a></li>
+                <li><a href="userMovieApi.php" class="active">Movie Api</a></li>
             </ul>
 
             <!--Right side of navigation bar-->
@@ -50,15 +32,16 @@ if (!isset($_SESSION['username'])) {
             </div>
     </div>
 
-    <!--Hero section with info and cta-->
-    <section>
-        <h3 class="header-text1">Your one way ticket for</h3>
-        <h1 class="header-text2">FETCH API</h1>
-        <h3 class="header-text3">Applications</h3>
-        <button class="header-text-btn"><a href="covidApi.html">Lets Go!</a></button>
-    </section>
+    <!--Button that'll generate the random movie-->
+    <button class="random-movie-btn" id="random_movie_btn">Generate Random movie</button>
+    
+    <!--Random movie image will load up here-->
+    <img src="" alt="" id="image1" class="movie-image-output">
 
-    <!--Import of javascript file-->
-    <script src="script.js"></script>
+    <!--Random movie title will load up here-->
+    <p id="movie_image_title" class="movie_image_title"></p>
+
+    <!--Linking the movie api script-->
+    <script src="../movie_api_script.js"></script>
 </body>
 </html>

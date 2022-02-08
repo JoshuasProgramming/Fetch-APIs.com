@@ -26,9 +26,8 @@ require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCekxGLAPxqxYXosPVe5fwTxKD_ru9Su5c&callback=map"></script>
     <link rel="stylesheet" href="../style.css">
-    <title>Covid Api</title>
+    <title>Weather Api</title>
 </head>
 <body>
     <!--Navigation bar-->
@@ -41,8 +40,8 @@ require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
 
             <!--Middle of navigation bar-->
             <ul class="middle-navbar">
-                <li><a href="userCovidApi.php" class="active">Covid Api Tracker</a></li>
-                <li><a href="userWeatherApi.php">Weather Api</a></li>
+                <li><a href="userCovidApi.php">Covid Api Tracker</a></li>
+                <li><a href="userWeatherApi.php" class="active">Weather Api</a></li>
                 <li><a href="userMovieApi.php">Movie Api</a></li>
             </ul>
 
@@ -56,27 +55,26 @@ require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
     </div>
 
     <!--Search bar-->
-    <input type="search" class="search-covid-api" id="search_covid_api" placeholder="Enter Country">
-
-    <!--Select Covid Options-->
-    <select class="select-covid-api" id="select_covid_api" disabled>
+    <input placeholder="enter location" type="search" id="country_weather" class="search-weather-api">
+    
+    <!--Select Weather Options-->
+    <select class="select-weather-api" id="select_weather_api" disabled>
         <option value="select">Select</option>
-        <option value="covid_deaths">Covid Deaths</option>
-        <option value="covid_cases">Covid Cases</option>
-        <option value="incident_rate">Incident Rate</option>
-        <option value="mortality_rate">Mortality Rate</option>
+        <option value="Temperature(f)">Temperature(f)</option>
+        <option value="Temperature(c)">Temperature(c)</option>
+        <option value="wind (mph)">wind (mph)</option>
+        <option value="wind (kph)">wind (kph)</option>
+        <option value="humidity">humidity</option>
+        <option value="uv">uv</option>
+        <option value="Condition">Condition</option>
+        <option value="Last Updated">Last Updated</option>
     </select>
 
     <!--Container for output-->
-    <div class="covid-api-output-container">
-        <p class="output-text" id="output_text"></p>
-        <div style="width:490px; height:490px;" class="google-map" id="map">
-
-        </div>
-
-        
+    <div class="weather-api-output-container">
+        <p class="output-weather-text" id="output_text"></p>
     </div>
-<!--Import of javascript file-->
-<script src="../covid_api_script.js"></script>
+    
+    <script src="weather_api_script.js"></script>
 </body>
 </html>

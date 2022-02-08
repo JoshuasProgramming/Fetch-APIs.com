@@ -89,16 +89,16 @@ if(isset($_POST['update'])){
 
             <!--Middle of navigation bar-->
             <ul class="middle-navbar">
-                <li><a href="covidApi.php">Covid Api Tracker</a></li>
-                <li><a href="weatherApi.php">Weather Api</a></li>
-                <li><a href="movieApi.php">Movie Api</a></li>
+                <li><a href="userCovidApi.php">Covid Api Tracker</a></li>
+                <li><a href="userWeatherApi.php" class="active">Weather Api</a></li>
+                <li><a href="userMovieApi.php">Movie Api</a></li>
             </ul>
 
             <!--Right side of navigation bar-->
             <div class="right-side">
                 <ul class="right-navbar">
                     <li><a href="userAccount.php">Account</a></li>
-                    <li><a href="../includes/logoutUser.php">Logout</a></li>
+                    <li><a href="../includes/logoutUser.php">logout</a></li>
                 </ul>
             </div>
     </div>
