@@ -6,11 +6,11 @@ session_start();
 //prevents the undefined array key ERROR
 error_reporting(0);
 
-//Checking if the userhas a session. If they don't they'll be redirected
+//Checking if the user has a session. If they don't they'll be redirected
 //to the admin login page
 if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You have to log in first";
-    header("Location:/website%204/adminLogin.html");
+    header("Location:/website%204/login.html");
 }
 
 //Variable for the user's name

@@ -36,7 +36,7 @@ if (!isset($_SESSION['username'])) {
 
             <!--Middle of navigation bar-->
             <ul class="middle-navbar">
-                <li><a href="../covidApi.html">Covid Api Tracker</a></li>
+                <li><a href="userCovidApi.php">Covid Api Tracker</a></li>
                 <li><a href="../weatherApi.html">Weather Api</a></li>
                 <li><a href="../movieApi.html">Movie Api</a></li>
             </ul>

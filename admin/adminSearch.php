@@ -55,7 +55,7 @@ require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
     
     <?php
     //Search bar below
-    if(isset($_POST['submit'])){
+    if(isset($_POST['findUser'])){
         $user = $_POST['findUser'];
         $query_string = ("SELECT * FROM users WHERE username LIKE '$user'");
         
@@ -64,10 +64,19 @@ require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
 
         if($result_count > 0){
             while($results = mysqli_fetch_array($query)){
+                if($results['userImage'] !== ""){
+                    //if the user has a profile image
                     echo "<h3 style='position:absolute; top:35%; left:45%; font-size:90px;'>ID: ".$results['id']."</h3>";
                     echo "<h3 style='position:absolute; top:50%; left:45%; font-size:90px;'>Username: ".$results['username']."</h3>";
                     echo "<h3 style='position:absolute; top:65%; left:45%; font-size:90px;'>Email: ".$results['email']."</h3>";
                     echo "<img style='position:absolute; text-align:center; top:38%; left:15%;' width='280px' height='280px' src='../images/".$results['userImage']."'";
+                } else if($results['userImage'] == ""){
+
+                    echo "<h3 style='position:absolute; top:35%; left:45%; font-size:90px;'>ID: ".$results['id']."</h3>";
+                    echo "<h3 style='position:absolute; top:50%; left:45%; font-size:90px;'>Username: ".$results['username']."</h3>";
+                    echo "<h3 style='position:absolute; top:65%; left:45%; font-size:90px;'>Email: ".$results['email']."</h3>";
+                    echo "<img style='position:absolute; text-align:center; top:38%; left:15%;' width='280px' height='280px' src='../images/default.jpg'";
+                }
             }
         }
 

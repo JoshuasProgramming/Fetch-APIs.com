@@ -69,7 +69,7 @@ if(isset($_POST['delete'])){
 
     <!--Hero section with user information and cta-->
     <?php 
-    echo"<table border=1 style='position:absolute; top:20%; left:17%; font-size:20px; border-collapse:collapse;'>
+    echo"<table border=1 style='position:absolute; top:20%; left:16%; font-size:20px; border-collapse:collapse;'>
     <caption style='font-size:25px;'>User Account</caption>
     <thead>
         <th style='padding:10px 10px;'>ID</th>
@@ -100,8 +100,8 @@ if(isset($_POST['delete'])){
     ?>
 
     <form action="adminSearch.php" method="post">
-        <input name="findUser" class="search-covid-api" style="margin:490px 355px;" type="search">
-        <button type="submit" name="submit" style="position:absolute; font-size:20px; top:87%; left:47%; height:50px; width:100px;">Find User</button>
+        <input placeholder="Find User" name="findUser" class="search-covid-api" style="margin:520px 359px;" type="search">
+        
     </form>
     
     <!--Import of javascript file-->

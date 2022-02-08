@@ -41,7 +41,7 @@ search_covid_api.addEventListener("keyup", (e)=>{
                         //output covid deaths
                         if(select_covid_api.value == "covid_deaths"){
                             output_text.innerText = "Covid deaths in " + search_covid_api.value + ": " + data.features[i].attributes.Deaths.toLocaleString('en-US');
-                        
+                            
                             //output covid cases
                         } else if(select_covid_api.value == "covid_cases"){
                             output_text.innerText = "Covid cases in " + search_covid_api.value + ": " + data.features[i].attributes.Confirmed.toLocaleString('en-US');
@@ -87,4 +87,5 @@ search_covid_api.addEventListener("keyup", (e)=>{
 
         }
     });
+
 });

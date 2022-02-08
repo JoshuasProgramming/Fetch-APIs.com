@@ -1,6 +1,6 @@
 //Api key https://api.themoviedb.org/3/movie/550?api_key=705b3276eaab818976e45618bf036919
 
-//Grabbing the image area element from the DOM=> here we will appened the random movie 
+//Grabbing the image area element from the DOM=> here we will appended the random movie 
 //image
 const image1 = document.getElementById('image1');
 
@@ -23,7 +23,7 @@ const random_movie_btn = document.getElementById('random_movie_btn').addEventLis
     //We then put the random number from 1 - 996 into the url for selecting
     //a random movie
     let url = ("https://api.themoviedb.org/3/movie/" + random_move_id + "?api_key=705b3276eaab818976e45618bf036919");
-
+    
     /**
      * 1.Fetch the url of the movie api data
      * 2.Send a response in json
