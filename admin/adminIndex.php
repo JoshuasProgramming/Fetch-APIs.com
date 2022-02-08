@@ -31,8 +31,9 @@ if(isset($_POST['delete'])){
     }
     header("location:adminIndex.php");
 } 
-
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -95,7 +96,13 @@ if(isset($_POST['delete'])){
     }
     echo"</table>";
 
+
     ?>
+
+    <form action="adminSearch.php" method="post">
+        <input name="findUser" class="search-covid-api" style="margin:490px 355px;" type="search">
+        <button type="submit" name="submit" style="position:absolute; font-size:20px; top:87%; left:47%; height:50px; width:100px;">Find User</button>
+    </form>
     
     <!--Import of javascript file-->
     <script src="adminScript.js"></script>
