@@ -6,6 +6,8 @@ session_start();
 //prevents the undefined array key ERROR
 error_reporting(0);
 
+//Checking if the user has a session. If they don't they'll be redirected
+//to the admin login page
 if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You have to log in first";
     header("Location:/website%204/login.html");
@@ -20,6 +22,7 @@ if (!isset($_SESSION['username'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
+    <!--Putting the user's name into the title of the page using the PHP session-->
     <title><?php echo $_SESSION['username']?>'s account</title>
 </head>
 <body>

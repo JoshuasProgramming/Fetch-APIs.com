@@ -6,6 +6,8 @@ session_start();
 //prevents the undefined array key ERROR
 error_reporting(0);
 
+//Checking if the userhas a session. If they don't they'll be redirected
+//to the admin login page
 if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You have to log in first";
     header("Location:/website%204/adminLogin.html");
@@ -19,7 +21,6 @@ require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +28,7 @@ require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
+    <!--Putting the user's name into the title of the page using the PHP session-->
     <title><?php echo $_SESSION['username']?>'s' Dashboard</title>
 </head>
 <body>
@@ -61,12 +63,18 @@ require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
     if(isset($_POST['submit'])){
         //move_uploaded_file 
         
-        //$hash = md5($_FILES['file']['name']); 
+        //Create a unique ID which will be assigned to a variable called '$hash'.
+        //IMPORTANT => This unique ID prevents users from overridden someone elses image if they rename their image
+        //to someone elses.
         $hash = uniqid();
-        echo $hash;
-        //move_uploaded_file($_FILES['file']['tmp_name'],'../images/'.$_FILES['file']['name']);
+
+        //Using the 'move_upload_file' method which takes to image file and temporary name of the file
+        //The 'move_upload_file' method will then push the image to a specific location ('../images')
+        //The image name has the unique ID ('$hash' variable), which will be assigned as a jpeg file.
         move_uploaded_file($_FILES['file']['tmp_name'],'../images/'.$hash.'.jpg');
-        //$sql_image = "UPDATE users SET userImage = '".$_FILES['file']['name']."'WHERE username='$user'";
+
+        //Creating query for the SQL UPDATE
+        //We're pushing the unique jpg name into the 'userImage' column in the 'users' table.
         $sql_image = "UPDATE users SET userImage = '".$hash. '.jpg'. "'WHERE username='$user'";
         $q = mysqli_query($conn, $sql_image);
     }
@@ -76,19 +84,38 @@ require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
         <?php
 
         //Adding the default user profile image
+        //Creating query for an SQL SELECT
+        //We're grabbing all the users from the 'users' table, and selecting the current user.
+        //The '$user' variable which was instantiated on lime 15 is used to grab the user, as that variable has
+        //stored the user's session.
         $sql = ("SELECT * FROM users WHERE username='$user'");
-
         $result = mysqli_query($conn, $sql);
 
+        //We're going to loop through x amount of users (it will always be 1) with that unique username.
         while($row = mysqli_fetch_assoc($result)){
 
+            //We're going to output/echo the user's name above their profile image
             echo "<h2 style='font-size:25px;'>".$row['username'] . "</h2><br>";
 
+            //Create a condition which asks if the user already has a profile image assigned the them 
+            //within the database ('users' table => 'userImage' column).
             if($row['userImage'] == ""){
+
+                //We're going to output/echo a default image as the user's profile (IF THEY HAVEN'T ALREADY GOT ONE).
                 echo"<img style='border-radius=50px;' width='300px' height='300px' src='../images/default.jpg'";
+                
+                //Assign the 'default.jpg' image to a variable, which will then be used in the UPDATE SQL query.
                 $image = "default.jpg";
+
+                //Creating query for an SQL UPDATE
+                //We're grabbing the user from the 'users' table, and updating their 'userImage' 
+                //to the $image variable, within the database.
                 $sql_update_image = mysqli_query($conn, "UPDATE users SET userImage='$image' WHERE username='$username'");
+            
+            //What happens if the user's image isn't assigned to them in the database.
             } else {
+                
+                //We're going to output/echo the user's profile (AS THEY ALREADY HAVE ONE IN THE DATABASE).
                 echo"<img width='300px' height='300px' src='../images/".$row['userImage']."'";
             }
         }
@@ -98,7 +125,7 @@ require_once 'C:\xampp\htdocs\website 4\includes\connection.php';
 
     <section>
         <!--Header text for the user's account name-->
-        <h1 class="header-text2" style="font-size:80px; top:-50%; left:60%;"> <?php echo $_SESSION['username']?>'s Account </h1>
+        <h1 class="header-text2" style="font-size:70px; top:-50%; left:60%;"> <?php echo $_SESSION['username']?>'s Account </h1>
     
         <!--Update account button-->
         <button style="position:absolute; font-size:70px; top:-40%; left:45%;" id="user_update_btn">Update Account</button>

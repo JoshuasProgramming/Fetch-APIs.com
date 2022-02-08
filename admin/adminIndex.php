@@ -6,6 +6,8 @@ session_start();
 //prevents the undefined array key ERROR
 error_reporting(0);
 
+//Checking if the admin has a session. If they don't they'll be redirected
+//to the admin login page
 if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You have to log in first";
     header("Location:/website%204/adminLogin.html");
@@ -64,7 +66,7 @@ if(isset($_POST['delete'])){
             </div>
     </div>
 
-    <!--Hero section with user infomation and cta-->
+    <!--Hero section with user information and cta-->
     <?php 
     echo"<table border=1 style='position:absolute; top:20%; left:17%; font-size:20px; border-collapse:collapse;'>
     <caption style='font-size:25px;'>User Account</caption>
